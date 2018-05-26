@@ -1,5 +1,6 @@
 import React from 'react';
 import AjaxRequest from "../../services/AjaxRequest";
+import Modal from "../global/Modal";
 
 
 export default class Auth extends React.Component {
@@ -8,13 +9,26 @@ export default class Auth extends React.Component {
         super(props);
         this.state = {
             login: "Guest",
-            isAuth: false
+            isAuth: false,
+            isOpen: false,
+            email: "",
+            password: ""
         }
     }
+    toggleModal =() =>{
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    };
 
     sendLogin =() => {
-        let test = new AjaxRequest().send('/auth/login', null, {email: 'igrock88@gmail.com', password: 'qwerty'});
-        console.log(test.data);
+        console.log(this.state.email);
+    };
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]:  event.target.value
+        });
     };
 
     render() {
@@ -22,7 +36,19 @@ export default class Auth extends React.Component {
             <div>
                 {this.state.isAuth ?
                     <div><a href='/account'>Welcome, {this.state.login}</a> <a className='label label-primary' href='/logout'>Logout</a></div> :
-                    <div>Welcome, Guest. Please, <a href="/login">Login</a> or <a href="/register">Register</a></div>}
+                    <div>Welcome, Guest. Please, <a href='#' onClick={this.toggleModal}>Login</a> or <a href="/register">Register</a></div>}
+                <Modal show={this.state.isOpen}
+                       onClose={this.toggleModal}
+                       modalTitle={"Login"}>
+                    <div className="input-group login">
+                        <input onChange={this.handleChange} type="email" name="email" className="form-control login__textField" placeholder="Email"/>
+                        <input onChange={this.handleChange} type="password" name="password" className="form-control login__textField" placeholder="Password"/>
+                        <div className="btn-group" role="group" aria-label="...">
+                            <button onClick={this.sendLogin} type="button" id="login__button" className="btn btn-success">OK</button>
+                        </div>
+                    </div>
+
+                </Modal>
             </div>
         )
     }

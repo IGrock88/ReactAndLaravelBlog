@@ -11,6 +11,19 @@ module.exports = {
         rules: [
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
             {
+                test: /\.jsx?$/,
+                exclude: /node_modules|bower_components/,
+                loader: 'babel-loader',
+                query: {
+                    presets: [
+                        'react',
+                        'es2015',
+                        'stage-0'
+                    ],
+                    plugins: ['react-html-attrs', 'transform-decorators-legacy']
+                }
+            },
+            {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader'
             },
