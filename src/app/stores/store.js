@@ -9,6 +9,7 @@ import {blogsReducer} from "../reducers/blogsReducer";
 import {singleBlogReducer} from "../reducers/singleBlogsReducer";
 import {singlePostReducer} from "../reducers/singlePostReducer";
 import {commentsReducer} from "../reducers/commentsReducer";
+import {authReducer} from "../reducers/authReducer";
 
 
 const reducers = combineReducers({
@@ -16,7 +17,8 @@ const reducers = combineReducers({
     blogs: blogsReducer,
     blog: singleBlogReducer,
     post: singlePostReducer,
-    comments: commentsReducer
+    comments: commentsReducer,
+    authData: authReducer
 
 });
 

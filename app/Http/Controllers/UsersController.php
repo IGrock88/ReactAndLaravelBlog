@@ -14,7 +14,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return response()->json(['result' => 1]);
+        $usersModel = new Users();
+        return response()->json($usersModel->getUsers());
     }
 
     /**

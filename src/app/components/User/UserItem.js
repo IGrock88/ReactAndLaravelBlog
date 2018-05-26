@@ -13,8 +13,8 @@ export default class UserItem extends React.Component {
         return (
             <div className="thumbnail" >
                 <div className="caption">
-                    <h3>Login: {this.props.user.username}</h3>
-                    <p>Full name: {this.props.user.name}</p>
+                    <h3>Login: {this.props.user.name}</h3>
+                    <p>Full name: {this.props.user.login}</p>
                     <div>
                         <a href="#" className="btn btn-primary" role="button">Profile</a>
 

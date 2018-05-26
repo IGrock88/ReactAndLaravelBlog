@@ -1,5 +1,5 @@
 import dispacher from '../dispatcher';
-import {ADD_USER, FETCH_USERS_START, DELETE_USER, EDIT_USER} from "../constants/usersConstants";
+import {ADD_USER, FETCH_USERS_START, DELETE_USER, EDIT_USER, LOGIN_USER} from "../constants/usersConstants";
 
 export function addUserAction(user) {
     dispacher.dispatch({
@@ -27,6 +27,8 @@ export function editUserAction(user) {
         payload: user
     })
 }
+
+
 
 
 

@@ -12,8 +12,8 @@ export default class UserEditForm extends React.Component {
         super(props);
         this.state = {
             email: this.props.user.email,
-            username: this.props.user.username,
             name: this.props.user.name,
+            login: this.props.user.login,
             website: this.props.user.website,
             phone: this.props.user.phone,
             isValidForm: true, // валидация пока не готова,
@@ -39,8 +39,8 @@ export default class UserEditForm extends React.Component {
             let user = {
                 id: this.props.user.id,
                 email: this.state.email,
-                username: this.state.username,
                 name: this.state.name,
+                login: this.state.login,
                 website: this.state.website,
                 phone: this.state.phone,
             };
@@ -61,12 +61,12 @@ export default class UserEditForm extends React.Component {
                 </div>
                 <div className="input-group">
                     <span className="input-group-addon user_edit__label">Login</span>
-                    <input name='username' type="text" className="form-control" placeholder="Login"
-                           value={this.state.username} onChange={this.handleChange}/>
+                    <input name='name' type="text" className="form-control" placeholder="Login"
+                           value={this.state.login} onChange={this.handleChange}/>
                 </div>
                 <div className="input-group">
                     <span className="input-group-addon user_edit__label">Full name</span>
-                    <input name='name' type="text" className="form-control" placeholder="Full name"
+                    <input name='login' type="text" className="form-control" placeholder="Full name"
                            value={this.state.name} onChange={this.handleChange}/>
                 </div>
                 <div className="input-group">

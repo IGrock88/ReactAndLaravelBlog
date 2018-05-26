@@ -4,7 +4,7 @@ import {
     FETCH_USERS_START,
     FETCH_USERS_END,
     EDIT_USER,
-    DELETE_USER
+    DELETE_USER, LOGIN_USER
 } from "../constants/usersConstants";
 import dispatcher from '../dispatcher';
 import AjaxRequest from "../services/AjaxRequest";
@@ -20,7 +20,7 @@ class UsersStore extends EventEmitter {
 
     fetchUsersStart = () =>
     {
-        const URL = 'https://jsonplaceholder.typicode.com/users/';
+        const URL = '/api/users';
         this.ajax.send(URL, (data) =>{
             dispatcher.dispatch({
                 type: FETCH_USERS_END,
@@ -72,6 +72,10 @@ class UsersStore extends EventEmitter {
         this.change();
     };
 
+    loginUser = (userData) => {
+
+    };
+
     handleActions = (action) =>
     {
         switch (action.type)
@@ -94,6 +98,10 @@ class UsersStore extends EventEmitter {
             }
             case DELETE_USER: {
                 this.deleteUser(action.payload);
+                break;
+            }
+            case LOGIN_USER: {
+                this.loginUser(action.payload);
                 break;
             }
         }

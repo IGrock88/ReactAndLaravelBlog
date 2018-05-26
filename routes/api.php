@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/users', 'UsersController@index');
-Route::get('/users/delete', 'UsersController@delete');
-Route::get('/users/add', 'UsersController@add');
-Route::get('/users/edit', 'UsersController@edit');
+//Route::get('/users/delete', 'UsersController@delete');
+//Route::get('/users/add', 'UsersController@create');
+//Route::get('/users/edit', 'UsersController@edit');
 
