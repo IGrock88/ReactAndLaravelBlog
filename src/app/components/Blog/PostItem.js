@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router";
 import QuickPostText from "./QuickPostText";
-import LoadingAnimation from "../global/LoadingAnimation";
+
 
 export default class PostItem extends React.Component {
 
@@ -19,6 +19,7 @@ export default class PostItem extends React.Component {
     };
 
     render() {
+        console.log(this.props);
         return (
             <div  className="panel panel-default">
                 <div className="panel-heading">

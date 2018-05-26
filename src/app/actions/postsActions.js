@@ -2,7 +2,7 @@ import {FETCH_POSTS} from "../constants/postsConstants";
 import AjaxRequest from "../services/AjaxRequest";
 
 export function fetchPosts(idBlog = null) {
-    let url = 'https://my-json-server.typicode.com/IGrock88/json/posts';
+    let url = '/api/posts';
 
     return {
         type: FETCH_POSTS,

@@ -12,8 +12,4 @@ class Users extends Model
         return DB::table('users')->select('id','name', 'email', 'login', 'website', 'phone')->get();
     }
 
-    public function createUser(User $user)
-    {
-        //return DB::table('users')->insert()
-    }
 }

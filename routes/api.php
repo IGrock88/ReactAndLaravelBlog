@@ -17,8 +17,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/users', 'UsersController@index');
-//Route::get('/users/delete', 'UsersController@delete');
-//Route::get('/users/add', 'UsersController@create');
-//Route::get('/users/edit', 'UsersController@edit');
+Route::get('/users', 'UsersController@show');
+Route::get('/blogs', 'BlogsController@show');
+Route::get('/singleBlog/{idBlog}', 'BlogsController@showSingle');
+Route::get('/posts', 'PostsController@show');
+Route::get('/singlePost/{idPost}', 'PostsController@showSingle');
+
+
+
 

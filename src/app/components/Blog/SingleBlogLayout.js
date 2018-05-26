@@ -23,7 +23,7 @@ class SingleBlogLayout extends React.Component {
 
                 {this.props.is_fetching_blog || this.props.is_fetching_posts ?
                     <LoadingAnimation/> : <div>
-                        <BlogItem blogs={[this.props.blog]}/>
+                        <BlogItem blogs={this.props.blog}/>
                         <PostList posts={this.props.posts}/>
                     </div>}
              </div>

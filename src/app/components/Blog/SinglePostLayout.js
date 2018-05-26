@@ -19,7 +19,7 @@ class SinglePostLayout extends React.Component{
 
             {this.props.is_fetching_post ? <LoadingAnimation/> :
                 <div>
-                    <BlogItem blogs={[this.props.blog]}/>
+                    <BlogItem blogs={this.props.blog}/>
                     <PostItem post={this.props.post}/>
                     <CommentsList idPost={this.props.idPost}/>
                 </div>}

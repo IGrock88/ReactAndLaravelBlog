@@ -2,7 +2,7 @@ import {FETCH_SINGLE_BLOG} from "../constants/singleBlogConstants";
 import AjaxRequest from "../services/AjaxRequest";
 
 export function fetchBlog(idBlog) {
-    let url = 'https://my-json-server.typicode.com/IGrock88/json/blogs/' + idBlog;
+    let url = '/api/singleBlog/' + idBlog;
 
     return {
         type: FETCH_SINGLE_BLOG,

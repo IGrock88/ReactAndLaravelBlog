@@ -6184,6 +6184,7 @@ var PostItem = function (_React$Component) {
     _createClass(PostItem, [{
         key: "render",
         value: function render() {
+            console.log(this.props);
             return _react2.default.createElement("div", { className: "panel panel-default" }, _react2.default.createElement("div", { className: "panel-heading" }, _react2.default.createElement("h4", { className: "post__header" }, _react2.default.createElement(_reactRouter.Link, { to: '/blog/post/' + this.props.post.id }, this.props.post.title, " ")), _react2.default.createElement("a", { className: "label label-primary", style: { width: 100 + '%' },
                 onClick: this.toggleQuickText }, this.state.showDetails ? "Hide" : "View text")), _react2.default.createElement(_QuickPostText2.default, { text: this.props.post.body, show: this.state.showDetails }));
         }
@@ -32148,6 +32149,17 @@ function isPromise(value) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+            }
+        }
+    }return target;
+};
+
 exports.postsReducer = postsReducer;
 
 var _postsConstants = __webpack_require__(71);
@@ -32173,19 +32185,19 @@ function postsReducer() {
     switch (action.type) {
         case PostsConstants.FETCH_POSTS_PENDING:
             {
-                state = { state: state, is_fetching: true };
+                state = _extends({}, state, { is_fetching: true });
                 break;
             }
 
         case PostsConstants.FETCH_POSTS_FULFILLED:
             {
-                state = { state: state, is_fetching: false, posts: action.payload.data };
+                state = _extends({}, state, { is_fetching: false, posts: action.payload.data });
                 break;
             }
 
         case PostsConstants.FETCH_POSTS_REJECTED:
             {
-                state = { state: state, is_fetching: false, error_message: action.payload.message };
+                state = _extends({}, state, { is_fetching: false, error_message: action.payload.message });
                 break;
             }
     }
@@ -32267,6 +32279,17 @@ function blogsReducer() {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+            }
+        }
+    }return target;
+};
+
 exports.singleBlogReducer = singleBlogReducer;
 
 var _singleBlogConstants = __webpack_require__(72);
@@ -32292,19 +32315,19 @@ function singleBlogReducer() {
     switch (action.type) {
         case SingleBlogConstants.FETCH_SINGLE_BLOG_PENDING:
             {
-                state = { state: state, is_fetching: true };
+                state = _extends({}, state, { is_fetching: true });
                 break;
             }
 
         case SingleBlogConstants.FETCH_SINGLE_BLOG_FULFILLED:
             {
-                state = { state: state, is_fetching: false, blog: action.payload.data };
+                state = _extends({}, state, { is_fetching: false, blog: action.payload.data });
                 break;
             }
 
         case SingleBlogConstants.FETCH_SINGLE_BLOG_REJECTED:
             {
-                state = { state: state, is_fetching: false, error_message: action.payload.message };
+                state = _extends({}, state, { is_fetching: false, error_message: action.payload.message });
                 break;
             }
     }
@@ -32321,6 +32344,17 @@ function singleBlogReducer() {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+            }
+        }
+    }return target;
+};
+
 exports.singlePostReducer = singlePostReducer;
 
 var _singlePostConstants = __webpack_require__(73);
@@ -32346,19 +32380,19 @@ function singlePostReducer() {
     switch (action.type) {
         case SinglePostConstant.FETCH_SINGLE_POST_PENDING:
             {
-                state = { state: state, is_fetching: true };
+                state = _extends({}, state, { is_fetching: true });
                 break;
             }
 
         case SinglePostConstant.FETCH_SINGLE_POST_FULFILLED:
             {
-                state = { state: state, is_fetching: false, post: action.payload.data };
+                state = _extends({}, state, { is_fetching: false, post: action.payload.data });
                 break;
             }
 
         case SinglePostConstant.FETCH_SINGLE_POST_REJECTED:
             {
-                state = { state: state, is_fetching: false, error_message: action.payload.message };
+                state = _extends({}, state, { is_fetching: false, error_message: action.payload.message });
                 break;
             }
     }
@@ -32375,6 +32409,17 @@ function singlePostReducer() {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+            }
+        }
+    }return target;
+};
+
 exports.commentsReducer = commentsReducer;
 
 var _commentsConstants = __webpack_require__(74);
@@ -32400,19 +32445,19 @@ function commentsReducer() {
     switch (action.type) {
         case CommentsConstants.FETCH_COMMENTS_PENDING:
             {
-                state = { state: state, is_fetching: true };
+                state = _extends({}, state, { is_fetching: true });
                 break;
             }
 
         case CommentsConstants.FETCH_COMMENTS_FULFILLED:
             {
-                state = { state: state, is_fetching: false, comments: action.payload.data };
+                state = _extends({}, state, { is_fetching: false, comments: action.payload.data });
                 break;
             }
 
         case CommentsConstants.FETCH_COMMENTS_REJECTED:
             {
-                state = { state: state, is_fetching: false, error_message: action.payload.message };
+                state = _extends({}, state, { is_fetching: false, error_message: action.payload.message });
                 break;
             }
     }
@@ -34526,7 +34571,7 @@ function _interopRequireDefault(obj) {
 }
 
 function fetchBlogs() {
-    var url = 'https://my-json-server.typicode.com/IGrock88/json/blogs/';
+    var url = '/api/blogs';
 
     return {
         type: _blogsConstants.FETCH_BLOGS,
@@ -34695,7 +34740,7 @@ var SinglePostLayout = function (_React$Component) {
         key: "render",
         value: function render() {
 
-            return _react2.default.createElement("div", { className: "col-lg-8 panel" }, this.props.is_fetching_post ? _react2.default.createElement(_LoadingAnimation2.default, null) : _react2.default.createElement("div", null, _react2.default.createElement(_BlogItem2.default, { blogs: [this.props.blog] }), _react2.default.createElement(_PostItem2.default, { post: this.props.post }), _react2.default.createElement(_CommentsList2.default, { idPost: this.props.idPost })));
+            return _react2.default.createElement("div", { className: "col-lg-8 panel" }, this.props.is_fetching_post ? _react2.default.createElement(_LoadingAnimation2.default, null) : _react2.default.createElement("div", null, _react2.default.createElement(_BlogItem2.default, { blogs: this.props.blog }), _react2.default.createElement(_PostItem2.default, { post: this.props.post }), _react2.default.createElement(_CommentsList2.default, { idPost: this.props.idPost })));
         }
     }]);
 
@@ -34735,7 +34780,7 @@ function _interopRequireDefault(obj) {
 }
 
 function fetchPost(idPost) {
-    var url = 'https://my-json-server.typicode.com/IGrock88/json/posts/' + idPost;
+    var url = '/api/singlePost/' + idPost;
 
     return {
         type: _singlePostConstants.FETCH_SINGLE_POST,
@@ -36740,7 +36785,7 @@ var SingleBlogLayout = function (_React$Component) {
     _createClass(SingleBlogLayout, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement("div", null, this.props.is_fetching_blog || this.props.is_fetching_posts ? _react2.default.createElement(_LoadingAnimation2.default, null) : _react2.default.createElement("div", null, _react2.default.createElement(_BlogItem2.default, { blogs: [this.props.blog] }), _react2.default.createElement(_PostList2.default, { posts: this.props.posts })));
+            return _react2.default.createElement("div", null, this.props.is_fetching_blog || this.props.is_fetching_posts ? _react2.default.createElement(_LoadingAnimation2.default, null) : _react2.default.createElement("div", null, _react2.default.createElement(_BlogItem2.default, { blogs: this.props.blog }), _react2.default.createElement(_PostList2.default, { posts: this.props.posts })));
         }
     }]);
 
@@ -36862,7 +36907,7 @@ function _interopRequireDefault(obj) {
 function fetchPosts() {
     var idBlog = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
-    var url = 'https://my-json-server.typicode.com/IGrock88/json/posts';
+    var url = '/api/posts';
 
     return {
         type: _postsConstants.FETCH_POSTS,
@@ -36893,7 +36938,7 @@ function _interopRequireDefault(obj) {
 }
 
 function fetchBlog(idBlog) {
-    var url = 'https://my-json-server.typicode.com/IGrock88/json/blogs/' + idBlog;
+    var url = '/api/singleBlog/' + idBlog;
 
     return {
         type: _singleBlogConstants.FETCH_SINGLE_BLOG,
