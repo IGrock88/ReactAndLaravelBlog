@@ -1,5 +1,4 @@
 import React from 'react';
-import AjaxRequest from "../../services/AjaxRequest";
 import Modal from "../global/Modal";
 
 
