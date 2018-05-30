@@ -61,12 +61,12 @@ export default class UserEditForm extends React.Component {
                 </div>
                 <div className="input-group">
                     <span className="input-group-addon user_edit__label">Login</span>
-                    <input name='name' type="text" className="form-control" placeholder="Login"
+                    <input name='login' type="text" className="form-control" placeholder="Login"
                            value={this.state.login} onChange={this.handleChange}/>
                 </div>
                 <div className="input-group">
                     <span className="input-group-addon user_edit__label">Full name</span>
-                    <input name='login' type="text" className="form-control" placeholder="Full name"
+                    <input name='name' type="text" className="form-control" placeholder="Full name"
                            value={this.state.name} onChange={this.handleChange}/>
                 </div>
                 <div className="input-group">

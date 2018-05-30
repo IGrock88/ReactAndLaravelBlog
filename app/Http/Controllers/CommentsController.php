@@ -9,7 +9,8 @@ class CommentsController extends Controller
 {
     public function showCommentsByPost(Request $request)
     {
-
+        $commentsModel = new Comments();
+        return response()->json($commentsModel->getCommentsByIdPost($request->input('idPost')));
     }
 
 }

@@ -1170,77 +1170,6 @@ module.exports = emptyFunction;
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = undefined;
-
-var _createClass = function () {
-    function defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-        }
-    }return function (Constructor, protoProps, staticProps) {
-        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-    };
-}();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function");
-    }
-}
-
-function _possibleConstructorReturn(self, call) {
-    if (!self) {
-        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-        throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var LoadingAnimation = function (_React$Component) {
-    _inherits(LoadingAnimation, _React$Component);
-
-    function LoadingAnimation() {
-        _classCallCheck(this, LoadingAnimation);
-
-        return _possibleConstructorReturn(this, (LoadingAnimation.__proto__ || Object.getPrototypeOf(LoadingAnimation)).apply(this, arguments));
-    }
-
-    _createClass(LoadingAnimation, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement("div", { className: "animation_holder panel panel-default" }, _react2.default.createElement("div", { className: "cube3d__container" }, _react2.default.createElement("div", { className: "cube3d__side cube3d__top" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__bottom" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__left" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__right" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__back" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__front" }, "React Blog")));
-        }
-    }]);
-
-    return LoadingAnimation;
-}(_react2.default.Component);
-
-exports.default = LoadingAnimation;
-
-/***/ }),
-/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1327,6 +1256,77 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () {
+    function defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }return function (Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+    }
+}
+
+function _possibleConstructorReturn(self, call) {
+    if (!self) {
+        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+        throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var LoadingAnimation = function (_React$Component) {
+    _inherits(LoadingAnimation, _React$Component);
+
+    function LoadingAnimation() {
+        _classCallCheck(this, LoadingAnimation);
+
+        return _possibleConstructorReturn(this, (LoadingAnimation.__proto__ || Object.getPrototypeOf(LoadingAnimation)).apply(this, arguments));
+    }
+
+    _createClass(LoadingAnimation, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement("div", { className: "animation_holder panel panel-default" }, _react2.default.createElement("div", { className: "cube3d__container" }, _react2.default.createElement("div", { className: "cube3d__side cube3d__top" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__bottom" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__left" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__right" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__back" }, "React Blog"), _react2.default.createElement("div", { className: "cube3d__side cube3d__front" }, "React Blog")));
+        }
+    }]);
+
+    return LoadingAnimation;
+}(_react2.default.Component);
+
+exports.default = LoadingAnimation;
 
 /***/ }),
 /* 14 */
@@ -3658,7 +3658,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(13);
+var _reactRouter = __webpack_require__(12);
 
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
@@ -6129,7 +6129,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(13);
+var _reactRouter = __webpack_require__(12);
 
 var _QuickPostText = __webpack_require__(212);
 
@@ -6296,11 +6296,11 @@ function fetchAllComments() {
 }
 
 function fetchCommentsByPostId(idPost) {
-    var url = 'https://jsonplaceholder.typicode.com/posts/' + idPost + '/comments';
+    var url = '/api/comments';
 
     return {
         type: _commentsConstants.FETCH_COMMENTS,
-        payload: new _AjaxRequest2.default().send(url)
+        payload: new _AjaxRequest2.default().send(url, null, { idPost: idPost })
     };
 }
 
@@ -6773,7 +6773,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(13);
+var _reactRouter = __webpack_require__(12);
 
 var _reactRedux = __webpack_require__(17);
 
@@ -32576,7 +32576,7 @@ var _Modal = __webpack_require__(41);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
-var _LoadingAnimation = __webpack_require__(12);
+var _LoadingAnimation = __webpack_require__(13);
 
 var _LoadingAnimation2 = _interopRequireDefault(_LoadingAnimation);
 
@@ -32674,7 +32674,7 @@ var _Search = __webpack_require__(180);
 
 var _Search2 = _interopRequireDefault(_Search);
 
-var _reactRouter = __webpack_require__(13);
+var _reactRouter = __webpack_require__(12);
 
 var _Auth = __webpack_require__(181);
 
@@ -32751,7 +32751,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(13);
+var _reactRouter = __webpack_require__(12);
 
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
@@ -33090,7 +33090,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(13);
+var _reactRouter = __webpack_require__(12);
 
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
@@ -34469,7 +34469,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _LoadingAnimation = __webpack_require__(12);
+var _LoadingAnimation = __webpack_require__(13);
 
 var _LoadingAnimation2 = _interopRequireDefault(_LoadingAnimation);
 
@@ -34682,7 +34682,7 @@ var _PostItem = __webpack_require__(81);
 
 var _PostItem2 = _interopRequireDefault(_PostItem);
 
-var _LoadingAnimation = __webpack_require__(12);
+var _LoadingAnimation = __webpack_require__(13);
 
 var _LoadingAnimation2 = _interopRequireDefault(_LoadingAnimation);
 
@@ -34888,7 +34888,7 @@ var _CommentItem2 = _interopRequireDefault(_CommentItem);
 
 var _commentsActions = __webpack_require__(83);
 
-var _LoadingAnimation = __webpack_require__(12);
+var _LoadingAnimation = __webpack_require__(13);
 
 var _LoadingAnimation2 = _interopRequireDefault(_LoadingAnimation);
 
@@ -35070,7 +35070,7 @@ var _CommentItem2 = _interopRequireDefault(_CommentItem);
 
 var _commentsActions = __webpack_require__(83);
 
-var _LoadingAnimation = __webpack_require__(12);
+var _LoadingAnimation = __webpack_require__(13);
 
 var _LoadingAnimation2 = _interopRequireDefault(_LoadingAnimation);
 
@@ -35243,7 +35243,7 @@ var _UsersStore2 = _interopRequireDefault(_UsersStore);
 
 var _usersActions = __webpack_require__(24);
 
-var _LoadingAnimation = __webpack_require__(12);
+var _LoadingAnimation = __webpack_require__(13);
 
 var _LoadingAnimation2 = _interopRequireDefault(_LoadingAnimation);
 
@@ -36082,6 +36082,8 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = __webpack_require__(12);
+
 var _UserAdminOptions = __webpack_require__(223);
 
 var _UserAdminOptions2 = _interopRequireDefault(_UserAdminOptions);
@@ -36124,7 +36126,7 @@ var UserItem = function (_React$Component) {
         key: 'render',
         value: function render() {
 
-            return _react2.default.createElement('div', { className: 'thumbnail' }, _react2.default.createElement('div', { className: 'caption' }, _react2.default.createElement('h3', null, 'Login: ', this.props.user.name), _react2.default.createElement('p', null, 'Full name: ', this.props.user.login), _react2.default.createElement('div', null, _react2.default.createElement('a', { href: '#', className: 'btn btn-primary', role: 'button' }, 'Profile'), _react2.default.createElement(_UserAdminOptions2.default, { user: this.props.user,
+            return _react2.default.createElement('div', { className: 'thumbnail' }, _react2.default.createElement('div', { className: 'caption' }, _react2.default.createElement('h3', null, 'Login: ', this.props.user.name), _react2.default.createElement('p', null, 'Full name: ', this.props.user.login), _react2.default.createElement('div', null, _react2.default.createElement(_reactRouter.Link, { to: '/us', className: 'btn btn-primary', role: 'button' }, 'Profile'), _react2.default.createElement(_UserAdminOptions2.default, { user: this.props.user,
                 userRole: this.userRole }))));
         }
     }]);
@@ -36350,8 +36352,8 @@ var UserEditForm = function (_React$Component) {
             if (!this.props.show) return null;
 
             return _react2.default.createElement("div", null, _react2.default.createElement("div", { className: "input-group" }, _react2.default.createElement("span", { className: "input-group-addon user_edit__label" }, "Email"), _react2.default.createElement("input", { name: "email", type: "email", className: "form-control", placeholder: "Email",
-                value: this.state.email, onChange: this.handleChange })), _react2.default.createElement("div", { className: "input-group" }, _react2.default.createElement("span", { className: "input-group-addon user_edit__label" }, "Login"), _react2.default.createElement("input", { name: "name", type: "text", className: "form-control", placeholder: "Login",
-                value: this.state.login, onChange: this.handleChange })), _react2.default.createElement("div", { className: "input-group" }, _react2.default.createElement("span", { className: "input-group-addon user_edit__label" }, "Full name"), _react2.default.createElement("input", { name: "login", type: "text", className: "form-control", placeholder: "Full name",
+                value: this.state.email, onChange: this.handleChange })), _react2.default.createElement("div", { className: "input-group" }, _react2.default.createElement("span", { className: "input-group-addon user_edit__label" }, "Login"), _react2.default.createElement("input", { name: "login", type: "text", className: "form-control", placeholder: "Login",
+                value: this.state.login, onChange: this.handleChange })), _react2.default.createElement("div", { className: "input-group" }, _react2.default.createElement("span", { className: "input-group-addon user_edit__label" }, "Full name"), _react2.default.createElement("input", { name: "name", type: "text", className: "form-control", placeholder: "Full name",
                 value: this.state.name, onChange: this.handleChange })), _react2.default.createElement("div", { className: "input-group" }, _react2.default.createElement("span", { className: "input-group-addon user_edit__label" }, "Website"), _react2.default.createElement("input", { name: "website", type: "text", className: "form-control", placeholder: "Website",
                 value: this.state.website, onChange: this.handleChange })), _react2.default.createElement("div", { className: "input-group" }, _react2.default.createElement("span", { className: "input-group-addon user_edit__label" }, "Phone"), _react2.default.createElement("input", { name: "phone", type: "text", className: "form-control", placeholder: "Phone",
                 value: this.state.phone, onChange: this.handleChange })), _react2.default.createElement("div", null, _react2.default.createElement("button", { onClick: this.saveUser, className: "btn btn-success" }, "Save")), _react2.default.createElement(_Message2.default, { showMessage: this.state.isOpen }, "Save is successful"));
@@ -36725,7 +36727,7 @@ var _BlogItem = __webpack_require__(43);
 
 var _BlogItem2 = _interopRequireDefault(_BlogItem);
 
-var _LoadingAnimation = __webpack_require__(12);
+var _LoadingAnimation = __webpack_require__(13);
 
 var _LoadingAnimation2 = _interopRequireDefault(_LoadingAnimation);
 
