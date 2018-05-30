@@ -11,6 +11,8 @@ class Posts extends Model
     {
         return DB::table('posts')
             ->where('idBlog', '=', $idBlog)
+            ->offset(1)
+            ->limit(5)
             ->get();
     }
 
