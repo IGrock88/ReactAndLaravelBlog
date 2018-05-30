@@ -11,10 +11,10 @@ export function fetchAllComments() {
 }
 
 export function fetchCommentsByPostId(idPost) {
-    let url = 'https://jsonplaceholder.typicode.com/posts/' + idPost + '/comments';
+    let url = '/api/comments';
 
     return {
         type: FETCH_COMMENTS,
-        payload: new AjaxRequest().send(url)
+        payload: new AjaxRequest().send(url, null, {idPost: idPost})
     }
 }

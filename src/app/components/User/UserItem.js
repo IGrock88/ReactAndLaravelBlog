@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 import UserAdminOptions from "./UserAdminOptions";
 
 export default class UserItem extends React.Component {
@@ -16,7 +17,7 @@ export default class UserItem extends React.Component {
                     <h3>Login: {this.props.user.name}</h3>
                     <p>Full name: {this.props.user.login}</p>
                     <div>
-                        <a href="#" className="btn btn-primary" role="button">Profile</a>
+                        <Link to="/us" className="btn btn-primary" role="button">Profile</Link>
 
                         <UserAdminOptions user={this.props.user}
                                           userRole={this.userRole}/>

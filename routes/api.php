@@ -22,6 +22,7 @@ Route::get('/blogs', 'BlogsController@show');
 Route::get('/singleBlog/{idBlog}', 'BlogsController@showSingle');
 Route::get('/posts', 'PostsController@show');
 Route::get('/singlePost/{idPost}', 'PostsController@showSingle');
+Route::get('/comments', 'CommentsController@showCommentsByPost');
 
 
 
