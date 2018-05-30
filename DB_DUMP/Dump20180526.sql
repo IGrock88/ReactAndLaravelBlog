@@ -2,9 +2,9 @@ CREATE DATABASE  IF NOT EXISTS `blogLaravel` /*!40100 DEFAULT CHARACTER SET utf8
 USE `blogLaravel`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: blogLaravel
+-- Host: 127.0.0.1    Database: blogLaravel
 -- ------------------------------------------------------
--- Server version	5.6.38
+-- Server version	5.6.38-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,7 +30,7 @@ CREATE TABLE `blogs` (
   `idAuthor` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,33 @@ LOCK TABLES `blogs` WRITE;
 /*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
 INSERT INTO `blogs` VALUES (1,'Blog 1',1,'2018-04-20 13:20:19'),(2,'Blog 2',3,'2018-04-20 13:20:19'),(3,'Blog 3',2,'2018-04-20 13:20:19'),(4,'Blog 4',1,'2018-04-20 13:20:19');
 /*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `comments`
+--
+
+DROP TABLE IF EXISTS `comments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idPost` int(11) NOT NULL,
+  `idUser` int(11) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `body` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `comments`
+--
+
+LOCK TABLES `comments` WRITE;
+/*!40000 ALTER TABLE `comments` DISABLE KEYS */;
+INSERT INTO `comments` VALUES (1,3,2,'id labore ex et quam laborum','laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium'),(2,3,3,'quo vero reiciendis velit similique earum','est natus enim nihil est dolore omnis voluptatem numquam\\net omnis occaecati quod ullam at\\nvoluptatem error expedita pariatur\\nnihil sint nostrum voluptatem reiciendis et'),(3,3,4,'odio adipisci rerum aut animi','quia molestiae reprehenderit quasi aspernatur\\naut expedita occaecati aliquam eveniet laudantium\\nomnis quibusdam delectus saepe quia accusamus maiores nam est\\ncum et ducimus et vero voluptates excepturi deleniti ratione'),(4,3,3,'alias odio sit','non et atque\\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\\nquia voluptas consequuntur itaque dolor\\net qui rerum deleniti ut occaecati'),(5,4,2,'id labore ex et quam laborum','laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium'),(6,4,3,'quo vero reiciendis velit similique earum','est natus enim nihil est dolore omnis voluptatem numquam\\net omnis occaecati quod ullam at\\nvoluptatem error expedita pariatur\\nnihil sint nostrum voluptatem reiciendis et'),(7,4,4,'odio adipisci rerum aut animi','quia molestiae reprehenderit quasi aspernatur\\naut expedita occaecati aliquam eveniet laudantium\\nomnis quibusdam delectus saepe quia accusamus maiores nam est\\ncum et ducimus et vero voluptates excepturi deleniti ratione'),(8,4,3,'alias odio sit','non et atque\\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\\nquia voluptas consequuntur itaque dolor\\net qui rerum deleniti ut occaecati'),(9,5,2,'id labore ex et quam laborum','laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium'),(10,5,3,'quo vero reiciendis velit similique earum','est natus enim nihil est dolore omnis voluptatem numquam\\net omnis occaecati quod ullam at\\nvoluptatem error expedita pariatur\\nnihil sint nostrum voluptatem reiciendis et'),(11,6,4,'odio adipisci rerum aut animi','quia molestiae reprehenderit quasi aspernatur\\naut expedita occaecati aliquam eveniet laudantium\\nomnis quibusdam delectus saepe quia accusamus maiores nam est\\ncum et ducimus et vero voluptates excepturi deleniti ratione'),(12,7,4,'alias odio sit','non et atque\\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\\nquia voluptas consequuntur itaque dolor\\net qui rerum deleniti ut occaecati'),(13,7,2,'id labore ex et quam laborum','laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium'),(14,8,3,'quo vero reiciendis velit similique earum','est natus enim nihil est dolore omnis voluptatem numquam\\net omnis occaecati quod ullam at\\nvoluptatem error expedita pariatur\\nnihil sint nostrum voluptatem reiciendis et'),(15,8,4,'odio adipisci rerum aut animi','quia molestiae reprehenderit quasi aspernatur\\naut expedita occaecati aliquam eveniet laudantium\\nomnis quibusdam delectus saepe quia accusamus maiores nam est\\ncum et ducimus et vero voluptates excepturi deleniti ratione'),(16,8,3,'alias odio sit','non et atque\\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\\nquia voluptas consequuntur itaque dolor\\net qui rerum deleniti ut occaecati');
+/*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -114,7 +141,7 @@ CREATE TABLE `users` (
   `remember_token` text COLLATE utf8mb4_unicode_ci,
   `userRole` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +150,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Bret','hildegard.org','Leanne Graham','Sincere@april.biz','1-770-736-8031','$2y$10$eunW6fr8Pj86n021Ad4IwOvm8Y4G.Mk5QB83aphuhCMc6wgVq7d2u','0000-00-00 00:00:00','0000-00-00 00:00:00','0','user'),(2,'Antonette','anastasia.net','Ervin Howell','Shanna@melissa.tv','010-692-6593','$2y$10$eunW6fr8Pj86n021Ad4IwOvm8Y4G.Mk5QB83aphuhCMc6wgVq7d2u','0000-00-00 00:00:00','0000-00-00 00:00:00','0','user'),(3,'Samantha','ramiro.info','Clementine Bauch','Nathan@yesenia.net','1-463-123-4447','$2y$10$eunW6fr8Pj86n021Ad4IwOvm8Y4G.Mk5QB83aphuhCMc6wgVq7d2u','0000-00-00 00:00:00','0000-00-00 00:00:00','0','user'),(4,'Karianne','kale.biz','Patricia Lebsack','Julianne.OConner@kory.org','493-170-9623','$2y$10$eunW6fr8Pj86n021Ad4IwOvm8Y4G.Mk5QB83aphuhCMc6wgVq7d2u','0000-00-00 00:00:00','0000-00-00 00:00:00','0','user'),(9,'admin','\"\"','admin','admin@a.a','\"\"','$2y$10$4ViPKLwJNQlwle4Xx55bYeEa6yVwFmYkzAHhBQWz7TBg6IT6wzWay','2018-05-25 21:10:47','2018-05-25 21:10:47',NULL,'admin');
+INSERT INTO `users` VALUES (1,'Bret','hildegard.org','Leanne Graham','Sincere@april.biz','1-770-736-8031','$2y$10$eunW6fr8Pj86n021Ad4IwOvm8Y4G.Mk5QB83aphuhCMc6wgVq7d2u','0000-00-00 00:00:00','0000-00-00 00:00:00','0','user'),(2,'Antonette','anastasia.net','Ervin Howell','Shanna@melissa.tv','010-692-6593','$2y$10$eunW6fr8Pj86n021Ad4IwOvm8Y4G.Mk5QB83aphuhCMc6wgVq7d2u','0000-00-00 00:00:00','0000-00-00 00:00:00','0','user'),(3,'Samantha','ramiro.info','Clementine Bauch','Nathan@yesenia.net','1-463-123-4447','$2y$10$eunW6fr8Pj86n021Ad4IwOvm8Y4G.Mk5QB83aphuhCMc6wgVq7d2u','0000-00-00 00:00:00','0000-00-00 00:00:00','0','user'),(4,'Karianne','kale.biz','Patricia Lebsack','Julianne.OConner@kory.org','493-170-9623','$2y$10$eunW6fr8Pj86n021Ad4IwOvm8Y4G.Mk5QB83aphuhCMc6wgVq7d2u','0000-00-00 00:00:00','0000-00-00 00:00:00','0','user'),(9,'admin','\"\"','admin','admin@a.a','\"\"','$2y$10$4ViPKLwJNQlwle4Xx55bYeEa6yVwFmYkzAHhBQWz7TBg6IT6wzWay','2018-05-25 21:10:47','2018-05-25 21:10:47',NULL,'admin'),(10,'testUser1','\"\"','Test test','sadfasdf@test.com','\"\"','$2y$10$pyhjYDxAw.TKgvuVwN6InOVpIcyO1b5geMWSnk/9svyvy2UwOgkrq','2018-05-29 23:50:31','2018-05-29 23:50:31','m3vQcPALpaq8vYLCKN76B9tOrAaHoyjyElyDvtmH0z8UvpBMJIlETaw5taV7','user');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -136,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-26 21:25:00
+-- Dump completed on 2018-05-30 18:55:04
