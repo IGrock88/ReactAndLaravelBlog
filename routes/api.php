@@ -24,7 +24,7 @@ Route::get('/singleBlog/{idBlog}', 'BlogsController@showSingle');
 Route::get('/posts', 'PostsController@show');
 Route::get('/singlePost/{idPost}', 'PostsController@showSingle');
 Route::get('/comments', 'CommentsController@showCommentsByPost');
-Route::middleware('auth:api')->get('/test', 'Auth\LoginController@getCurrentUser');
+//Route::get('/test', 'Auth\LoginController@getCurrentUser');
 
 
 
