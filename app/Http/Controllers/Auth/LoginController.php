@@ -51,8 +51,5 @@ class LoginController extends Controller
         return response()->json(["result" => "false"]);
     }
 
-    public function getCurrentUser(Request $request){
-        return response()->json(Auth::user()->id);
-    }
 
 }

@@ -24,7 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return response()->json(['result' => 'true', 'user' => Auth::user()]);
-        //return view('home');
+        return view('home');
     }
 }
