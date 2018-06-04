@@ -12,8 +12,12 @@ class BlogsController extends Controller
     {
         $startIndex = $request->input('startIndex');
         $limit = $request->input('limit');
+
         $blogsModel = new Blogs();
-        return response()->json($blogsModel->getBlogs());
+        $blogsData = [];
+        $blogsData['blogs'] = $blogsModel->getBlogs($startIndex, $limit);
+        $blogsData['quantityBlogs'] = $blogsModel->getQuantityBlogs();
+        return response()->json($blogsData);
     }
 
     public function showSingle($idBlog)
