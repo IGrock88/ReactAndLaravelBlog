@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 
 class BlogsController extends Controller
 {
-    public function show()
+    public function show(Request $request)
     {
+        $startIndex = $request->input('startIndex');
+        $limit = $request->input('limit');
         $blogsModel = new Blogs();
         return response()->json($blogsModel->getBlogs());
     }
