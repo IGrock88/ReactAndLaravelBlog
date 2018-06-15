@@ -12,7 +12,11 @@ class PostsController extends Controller
     {
         $idBlog = $request->input('idBlog');
         $postsModel = new Posts();
-        return response()->json($postsModel->getPostsByIdBlog($idBlog));
+        $postsData = [];
+        $postsData['posts'] = $postsModel->getPostsByIdBlog($idBlog, $request->input('startIndex'),
+            $request->input('limit'));
+        $postsData['quantityPosts'] = $postsModel->getQuantityPostsByIdBlog($idBlog);
+        return response()->json($postsData);
     }
 
     public function showSingle($idPost)

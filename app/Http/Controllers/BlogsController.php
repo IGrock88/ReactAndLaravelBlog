@@ -10,12 +10,9 @@ class BlogsController extends Controller
 {
     public function show(Request $request)
     {
-        $startIndex = $request->input('startIndex');
-        $limit = $request->input('limit');
-
         $blogsModel = new Blogs();
         $blogsData = [];
-        $blogsData['blogs'] = $blogsModel->getBlogs($startIndex, $limit);
+        $blogsData['blogs'] = $blogsModel->getBlogs($request->input('startIndex'), $request->input('limit'));
         $blogsData['quantityBlogs'] = $blogsModel->getQuantityBlogs();
         return response()->json($blogsData);
     }

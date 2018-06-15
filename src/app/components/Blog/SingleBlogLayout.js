@@ -7,19 +7,22 @@ import {fetchPosts} from "../../actions/postsActions";
 import {connect} from "react-redux";
 import {fetchBlog} from "../../actions/singleBlogActions";
 
-
+const LIMIT_POSTS_ON_PAGE = 5;
+const DEFAULT_ACTIVE_PAGE = 1;
 class SingleBlogLayout extends React.Component {
 
     constructor(props){
         super(props);
         this.state = {
-            activePage: 1
+            activePage: DEFAULT_ACTIVE_PAGE
         };
         this.props.dispatch(fetchBlog(this.props.idBlog));
-        this.props.dispatch(fetchPosts(this.props.idBlog));
+        this.props.dispatch(fetchPosts(this.props.idBlog, (this.state.activePage - 1) * LIMIT_POSTS_ON_PAGE, LIMIT_POSTS_ON_PAGE));
     }
+
     handlePageChange = (pageNumber) => {
         this.setState({activePage: pageNumber});
+        this.props.dispatch(fetchPosts(this.props.idBlog, (pageNumber - 1) * LIMIT_POSTS_ON_PAGE, LIMIT_POSTS_ON_PAGE));
     };
 
     render() {
@@ -31,13 +34,13 @@ class SingleBlogLayout extends React.Component {
                     <LoadingAnimation/> : <div>
 
                         <BlogItem blogs={this.props.blog}/>
-                        <Pagination
+                        {this.props.quantityPosts !== 0 ?                         <Pagination
                             activePage={this.state.activePage}
-                            itemsCountPerPage={10}
-                            totalItemsCount={450}
+                            itemsCountPerPage={LIMIT_POSTS_ON_PAGE}
+                            totalItemsCount={this.props.quantityPosts}
                             pageRangeDisplayed={5}
                             onChange={this.handlePageChange}
-                        />
+                        /> : null}
                         <PostList posts={this.props.posts}/>
                     </div>}
              </div>
@@ -48,6 +51,7 @@ class SingleBlogLayout extends React.Component {
 function mapStateToProps(store) {
     return {
         posts: store.posts.posts,
+        quantityPosts: store.posts.quantityPosts,
         blog: store.blog.blog,
         is_fetching_posts: store.posts.is_fetching,
         is_fetching_blog: store.blog.is_fetching

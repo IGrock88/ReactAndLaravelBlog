@@ -13,8 +13,6 @@ class BlogsList extends React.Component {
         super(props);
 
         this.state = {
-            blogs: [],
-            quantityBlogs: 0,
             activePage: DEFAULT_ACTIVE_PAGE
         };
 

@@ -2,17 +2,18 @@ import React from 'react';
 import Modal from "../global/Modal";
 
 
+
 export default class Auth extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            login: "Guest",
-            isAuth: false,
+            login: "",
+            isAuth: true,
             isOpen: false,
-            email: "",
-            password: ""
         }
+
+
     }
     toggleModal =() =>{
         this.setState({
@@ -31,6 +32,7 @@ export default class Auth extends React.Component {
     };
 
     render() {
+        console.log(this.props);
         return (
             <div>
                 {this.state.isAuth ?

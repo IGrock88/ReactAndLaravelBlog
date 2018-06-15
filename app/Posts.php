@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class Posts extends Model
 {
-    public function getPostsByIdBlog($idBlog)
+    public function getPostsByIdBlog($idBlog, $startIndex, $limit)
     {
         return DB::table('posts')
             ->where('idBlog', '=', $idBlog)
-            ->offset(1)
-            ->limit(5)
+            ->offset($startIndex)
+            ->limit($limit)
             ->get();
     }
 
@@ -21,5 +21,12 @@ class Posts extends Model
         return DB::table('posts')
             ->where('id', '=', $idPost)
             ->get();
+    }
+
+    public function getQuantityPostsByIdBlog($idBlog)
+    {
+        return DB::table('posts')
+            ->where('idBlog', '=', $idBlog)
+            ->count('idBlog');
     }
 }
